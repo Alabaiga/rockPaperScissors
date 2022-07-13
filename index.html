@@ -8,17 +8,18 @@
     <script>
         // Function to setup computer play of rock, paper and scissors via randomly choosing from an array
         function computerPlay() {
-            playType = ['Rock','Paper','Scissors']
-            result = playType[Math.floor(Math.random()* playType.length)]
+            playType = ['rock','paper','scissors']
+            const result = playType[Math.floor(Math.random()* playType.length)]
+            console.log(result)
             return result
         }
-        computerPlay()
         // Function to let the user choose an input
         function userPlay() {
-          playType = prompt('Choose rock, paper or scissors!','').toLowerCase()
-          if (isNaN(playType)) {
-            if (playType === 'rock' || playType === 'paper' || playType === 'scissors') {         
-              return playType
+          chosenType = prompt('Choose rock, paper or scissors','').toLowerCase()
+          if (isNaN(chosenType)) {
+            if (chosenType === 'rock' || chosenType === 'paper' || chosenType === 'scissors') {      
+              console.log(chosenType)   
+              return chosenType
             } else {
               alert('Please enter either: rock, paper or scissors')
             }
@@ -26,7 +27,33 @@
             alert('Please enter either: rock, paper or scissors')
           }
         }
-        
+        // function that plays a round of rock,paper scissors
+        function playRound(computerPlay,userPlay) {
+          if (computerPlay != userPlay) {
+            if (userPlay === 'rock') {
+                if (computerPlay === 'paper') {
+                  console.log('You lose! Paper beats rock.')
+                } else {
+                  console.log('You win! Rock beats scissors.')
+                }
+            } else if (userPlay === 'paper') {
+                if (computerPlay ==='rock') {
+                  console.log('You win! Paper beats rock!')
+                } else {
+                  console.log('You lose! Scissors beat paper.')
+                }
+            } else if (userPlay === 'scissors') {
+                if (computerPlay === 'rock') {
+                  console.log('You lose! Rock beats scissors.')
+                } else {
+                  console.log('You win! Scissors beats paper!')
+                }
+            }
+          } else {
+            console.log('The round is a draw!')
+          }
+        }
+        playRound(computerPlay(),userPlay())
     </script>
   </body>
 </html>
