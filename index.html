@@ -28,7 +28,6 @@
         // variables to count wins
         let compWins = 0
         let userWins = 0
-        let drawGame = 0
         // function that plays a round of rock,paper scissors
         function playRound(computerPlay,userPlay) {
           if (computerPlay != userPlay) {
@@ -58,7 +57,6 @@
                 }
             }
           } else {
-            drawGame += 1
             console.log('The round is a draw!')
           }
         }
@@ -82,7 +80,7 @@
           } else if (compWins > userWins) {
             console.log(`The score is: You ${userWins} win's to the computers ${compWins} wins, you lose. Try again?`)
           } else {
-            console.log(`At ${drawGame} draws, it's a drawed game!`)
+            console.log('You tied! Try again?')
           }
           resetGame()
         }
@@ -90,7 +88,6 @@
         function resetGame() {
           compWins = 0
           userWins = 0
-          drawGame = 0
         }
        game()
     </script>
