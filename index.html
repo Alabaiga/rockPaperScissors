@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors!</title>
+  </head>
+  <body>
+    <script>
+        // Function to setup computer play of rock, paper and scissors via randomly choosing from an array
+        function computerPlay() {
+            playType = ['Rock','Paper','Scissors']
+            result = playType[Math.floor(Math.random()* playType.length)]
+            return result
+        }
+        computerPlay()
+        // Function to let the user choose an input
+        function userPlay() {
+          playType = prompt('Choose rock, paper or scissors!','').toLowerCase()
+          if (isNaN(playType)) {
+            if (playType === 'rock' || playType === 'paper' || playType === 'scissors') {
+              console.log(playType)
+              return playType
+            } else {
+              alert('Please enter either: rock, paper or scissors')
+            }
+          } else {
+            alert('Please enter either: rock, paper or scissors')
+          }
+        }
+        userPlay()
+    </script>
+  </body>
+</html>
 
