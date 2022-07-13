@@ -17,8 +17,7 @@
         function userPlay() {
           playType = prompt('Choose rock, paper or scissors!','').toLowerCase()
           if (isNaN(playType)) {
-            if (playType === 'rock' || playType === 'paper' || playType === 'scissors') {
-              console.log(playType)
+            if (playType === 'rock' || playType === 'paper' || playType === 'scissors') {         
               return playType
             } else {
               alert('Please enter either: rock, paper or scissors')
@@ -27,7 +26,7 @@
             alert('Please enter either: rock, paper or scissors')
           }
         }
-        userPlay()
+        
     </script>
   </body>
 </html>
