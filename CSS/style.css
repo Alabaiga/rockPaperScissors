@@ -39,7 +39,9 @@ header h1 , footer h5 {
 main {
     text-align: center;
     flex: auto;
-    background-color: #c678fa
+    background-color: #c678fa;
+    justify-content: center;
+    align-items: center;
 }
 button {
     border-radius: 4px;
