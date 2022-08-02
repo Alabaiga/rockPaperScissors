@@ -10,6 +10,10 @@ header {
     align-items: center;
     background-color: #9f1ceb;
 }
+header img {
+    width: 100px;
+    padding-left: 4%;
+}
 body {
     min-height: 100vh;
     display: flex;
@@ -46,10 +50,17 @@ button {
     font-size: 32px;
     padding: 16px;
     width: 220px;
-    transition: 0.5s;
     cursor: pointer;
     margin: 36px;
     box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+button:active {
+    transform: translateY(4px);
+}
+button:hover {
+    transition: .2s;
+    background-color: #824596;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.9);
 }
 .bodyContainer p {
     padding: 60px;
@@ -57,4 +68,8 @@ button {
     justify-content: center;
     font-size: 40px;
     color: white;
+}
+
+.optionContainer button {
+    display: none;
 }
